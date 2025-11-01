@@ -1,5 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using GYMONE.Helper;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace GYMONE.Helper.Tests
 {
@@ -86,14 +90,11 @@ namespace GYMONE.Helper.Tests
         }
 
         [TestMethod]
+        [ExpectedException(typeof(NullReferenceException))]
         public void IsAdminUser_ThrowsForNullInput()
         {
             // Method calls userName.ToLower() and will throw on null; assert that behavior.
-            if (!_utils.IsAdminUser(null))
-            {
-                Assert.Fail("Expected exception was not thrown.");
-            }    
-
+            _utils.IsAdminUser(null);
         }
     }
 }
