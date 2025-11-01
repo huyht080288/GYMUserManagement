@@ -207,6 +207,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\Utils.cs" />
     <Compile Include="Models\AssignRoleVM.cs" />
     <Compile Include="Models\ChangepasswordVM.cs" />
     <Compile Include="Models\Login.cs" />
